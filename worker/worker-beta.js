@@ -2,7 +2,7 @@
 * A Script Redesigned by SOURCE-CODE.MY.ID
 */
 const authConfig = {
-	"siteName": "G-Drive Index", // Website name
+	"siteName": "G-DRIVE", // Website name
 	"client_id": "58094879805-4654k2k5nqdid5bavft7fvea5u9po0t1.apps.googleusercontent.com",
 	"client_secret": "ZNPZ-vS6N9Zjsyb_sNMZmXHL",
 	"refresh_token": "", // Authorize token
@@ -20,7 +20,7 @@ const authConfig = {
 	 * [Note] For the disk whose id is set to the subfolder id, the search function will not be supported (it does not affect other disks).
 	 */
 	"roots": [{
-		"id": "",
+		"id": "root",
 		"name": "Drive Index",
 		"user": "",
 		"pass": "",
@@ -116,26 +116,26 @@ function html(current_drive_order = 0, model = {}) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
   <title>${authConfig.siteName}</title>
   <meta name="robots" content="noindex" />
-  <link rel="icon" href="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive@${uiConfig.version}/images/favicon.ico">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive/images/favicon.ico">
   <script>
     window.drive_names = JSON.parse('${JSON.stringify(authConfig.roots.map(it => it.name))}');
     window.MODEL = JSON.parse('${JSON.stringify(model)}');
     window.current_drive_order = ${current_drive_order};
     window.UI = JSON.parse('${JSON.stringify(uiConfig)}');
   </script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive@${uiConfig.version}/css/mdui-style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive/css/mdui-style.min.css">
   <script src="https://cdn.jsdelivr.net/combine/gh/jquery/jquery@3.2/dist/jquery.min.js"></script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/3.2.4/mediaelementplayer.css" rel="stylesheet" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/3.2.4/mediaelement-and-player.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive@${uiConfig.version}/css/bootstrap/${uiConfig.dark_mode ? 'dark' : 'light'}.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive/css/bootstrap/${uiConfig.dark_mode ? 'dark' : 'light'}.min.css">
   <style>${uiConfig.display_size ? '' : '.csize{display:none;}'}${uiConfig.display_time ? '' : '.cmtime{display:none;}'}</style>
-  <script src="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive@${uiConfig.version}/js/app.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive@${uiConfig.version}/js/mdui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive/js/app.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive/js/mdui.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/markdown-it@10.0.0/dist/markdown-it.min.js"></script>
 </head>
 <body>
 </body>
-<script src="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive@${uiConfig.version}/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/bulumonyet/G-Drive/js/bootstrap.min.js"></script>
 </html>`;
 };
 
